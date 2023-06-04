@@ -109,12 +109,27 @@ int deletar()
 }
 
 int main() //inicio do menu
-{
+ {
+ 	setlocale(LC_ALL, "Portuguese");
+ 	
 	int opcao=0; //definindo as variaveis
 	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
+	
+	printf("\t*Cartório da EBAC*\t\n\n");
+	printf("-Login de administrador!\n\n-Digite sua senha:");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)
+	{
+	system ("cls");
+	for(laco=1;laco=1;)
 	
 	for(laco=1;laco=1;)
-{
+  {
 	
 	system("cls"); //"cls" é para limpar a tela
 	
@@ -133,7 +148,7 @@ int main() //inicio do menu
 	system("cls");
 	
 	switch(opcao) //todas as opções do menu
-{
+ {
 	case 1:
 	registro(); //chamando as funções
 	break;
@@ -156,11 +171,15 @@ int main() //inicio do menu
 	system("pause"); 
 	break;
 	    
-}// fim da seleção
+   }// fim da seleção
 	
-}
+  }
   
-  
+ }
+ 
+ else
+     printf("Senha incorreta!");
+    
   
 }
 
